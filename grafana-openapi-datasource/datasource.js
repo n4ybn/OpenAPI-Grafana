@@ -355,7 +355,9 @@ System.register(['lodash'], function (_export, _context) {
                 var filter = "";
                 if(element.filter != undefined && element.filter != '')
                 {
-                    filter = "&$filter=" + element.filter;
+				    var uriEF = encodeURI(element.filter);	
+                    filter = "&$filter=" + uriEF;
+					
                 }
                 else
                 {
